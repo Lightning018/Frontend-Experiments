@@ -2,8 +2,8 @@
 Welcome to my collection of front-end web development projects! Each project demonstrates key aspects of user interface design, interactivity, and basic functionality using HTML, CSS, and JavaScript. 🌟
 
 🧑‍💻 Projects Included:
-🎨 Cultural Form: A form for cultural event registration with a dynamic background.
-🍿 Movie Ticket Booking: A simple form-based movie ticket booking interface.
+🎨 Cultural Form: A form for cultural event registration with a dynamic background. 
+🍿 Movie Ticket Booking: A simple form-based movie ticket booking interface. 
 📚 Grade Calculator: A tool that calculates grades based on user inputs for multiple subjects.
 🔢 EclipseSort: A number sorting tool with options for ascending and descending order.
 🖼️ Drag and Drop Image Uploader: An image upload interface with drag-and-drop functionality.
