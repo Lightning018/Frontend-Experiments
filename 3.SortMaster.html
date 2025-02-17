@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href=".style3.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>EclipseSort</title>
+</head>
+<body> 
+    <div class="wrapper"> 
+    <h1>EclipseSort</h1>
+<div class="input-box">
+    <label for="numbers">Enter numbers (comma-separated):</label>
+    <input type="text" id="numbers" placeholder="e.g., 5, 2, 8, 1">
+</div>
+    <button type="submit" class="btn" onclick="generateAscendingOrder()">Generate Ascending Order</button>
+    <button type="submit" class="btn" onclick="generateDescendingOrder()">Generate Descending Order</button>
+    <div class="btn" id="result"></div>
+</div>
+    <script>
+        function generateAscendingOrder() {
+            const inputNumbers = document.getElementById('numbers').value;
+            const numbersArray = inputNumbers.split(',').map(Number);
+            const ascendingOrder = numbersArray.sort((a, b) => a - b);
+            displayResult(ascendingOrder);
+        }
+        function generateDescendingOrder() {
+            const inputNumbers = document.getElementById('numbers').value;
+            const numbersArray = inputNumbers.split(',').map(Number);
+            const descendingOrder = numbersArray.sort((a, b) => b - a);
+            displayResult(descendingOrder);
+        }
+        function displayResult(order) {
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Result: ${order.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

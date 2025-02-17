@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background blur Popup</title> 
+    <style>  
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1) url('background99.jpg') no-repeat center/cover; /* Adjust the opacity here */
+    transition: 0.5px;
+    padding: 20px; 
+    text-align:center;  
+    
+}
+
+.container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+.container .content{
+    position: relative;
+    max-width: 800px;
+}
+h2{
+    font-weight: 600;
+    margin-bottom: 10px;
+    color:  white;  
+    font-style: italic; 
+    font-weight: 900; 
+    font-family: Amsterdam Four;
+
+    background: transparent;
+}
+.container .content img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    position: relative;
+    padding: 5px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #532222;
+    background: rgb (134,43,43);
+    transition: 1s;
+    background-color: #333;
+}
+a:hover{
+    transition: 1s;
+    background: #2b5c59;
+}
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
+}
+    </style>
+</head>
+    <link rel="stylesheet" href=".style9.css">
+<body>
+    <div class="container" id="blur">
+        <div class="content">
+            <h2> Discover the magic of our web experience ?</h2>            
+            <a href="#" onclick="toggle()">Read More</a>
+        </div>
+    </div>
+    <div id="popup">
+        <h2>Lightning</h2>
+        <p>This Project is Designed to Learn about Overlay Button</p>
+        <a href="#" onclick="toggle()">Close</a>
+    </div>
+    <script>
+        function toggle() {
+            var blur=document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
